@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+
+    background-color: gold; /* For browsers that do not support gradients */
+  background-image: linear-gradient(white, gold, goldenrod,#191900, black);
+
+
+
+  font-family:"Raleway", sans-serif;
+  font-size: 1.2rem;
+  color: white;
+  min-height: 100vh;
+}
+
+.full-height-grow {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.25em;
+  color: inherit;
+  text-decoration: none;
+}
+
+.brand-logo-name {
+  margin-left: 1rem;
+}
+
+.main-nav ul, .footer-nav ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+}
+
+.main-nav a, .footer-nav a {
+  color: inherit;
+  text-decoration: none;
+  padding: 1rem;
+}
+
+.main-nav a:hover, .footer-nav a:hover  {
+  color: #adadad;
+}
+
+.main-header, .main-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-header {
+  height: 140px;
+
+}
+
+.main-footer {
+  height: 170px;
+  background-color: #ffeb7f;
+  font-weight: bold;
+}
+
+.social-link img {
+  width: 1em;
+  margin-right: .25rem;
+}
+
+.main-footer .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  flex-grow: 1;
+}
+
+.title {
+  font-weight: 500;
+  font-size: 3em;
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+
+.sidebar {
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 100;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 16px;
+}
+
+.sidebar a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.main {
+  margin-left: 160px; /* Same as the width of the sidenav */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+.subtitle {
+  font-weight: 500;
+  font-size: 1.2em;
+  margin-bottom: 2rem;
+}
+
+#grad1 {
+    background-color: gold; /* For browsers that do not support gradients */
+  background-image: linear-gradient(gold, goldenrod, black);
+}
+
+
+
+.btn {
+  color: white;
+  background-color: #ffdb58;
+  padding: .75rem 1.5rem;
+  border-radius: .5rem;
+  text-decoration: bold;
+  font-size: .9rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color:#fae7b5 ;
+}
+
+.btn:focus {
+  background-color: Gold Fusion;
+}
+button {
+  position: relative;
+  margin: 4px auto 0;
+  background: #000;
+  font-size: 18px;
+  padding: 0;
+  font-family: gerogia, serif;
+  border: none;
+  padding: 10px 40px;
+  width: 100%;
+  background: #000;
+  color: #fff;
+  font-size: 16px;
+  max-width: 250px;
+  min-width: 100px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  transition: .2s;
+} button:hover {
+  letter-spacing: 3px;
+} button:active {
+  transform: scale(1.2);
+}
+
+button:before, button:after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px; 
+  background: linear-gradient(45deg, #000000, #191919, #323232, #666666, #cccccc, #ffffff, #ffff00, #e5e500, #cccc00, #999900, #666600, #4c4c00, #333300, #141400, #161600, #191900);
+  background-size: 400%;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  z-index: -1;
+  animation: linear-shadow 25s linear infinite;
+}
+
+button:before {
+  filter: blur(20px);
+}
+
+@keyframes linear-shadow {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+/* Style the list */
+ul.breadcrumb {
+  padding: 10px 16px;
+  list-style: none;
+  background-color: #eee;
+}
+
+/* Display list items side by side */
+ul.breadcrumb li {
+  display: inline;
+  font-size: 18px;
+}
+
+/* Add a slash symbol (/) before/behind each list item */
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
+}
+
+/* Add a color to all links inside the list */
+ul.breadcrumb li a {
+  color: #0275d8;
+  text-decoration: none;
+}
+
+/* Add a color on mouse-over */
+ul.breadcrumb li a:hover {
+  color: #01447e;
+  text-decoration: underline;
+}

@@ -1,0 +1,237 @@
+
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body,html {
+	//background-image: linear-gradient(white,gold, yellow, gold, black);
+	height: 100%;
+	background-color: white;
+font-family:"Raleway", sans-serif;
+}
+
+/* Header/logo Title */
+.header {
+  padding: 80px;
+  text-align: center;
+  color: white;
+}
+
+/* Increase the font size of the heading */
+.header h1 {
+  font-size: 40px;
+}
+
+/* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
+.navbar {
+  overflow: hidden;
+  background-color: #ffffff;
+ position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Active/current link */
+.navbar a.active {
+//  background-color: #666;
+  color: white;
+}
+
+
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+   background-color: #202027;
+  font-weight: bold;
+  display: flex;
+   justify-content: space-between;
+   align-items: center;
+
+}
+.footer-nav a {
+  color: inherit;
+  text-decoration: none;
+  padding: 1rem;
+}
+
+
+.social-link img {
+  width: 1em;
+  margin-right: .25rem;
+}
+
+
+
+
+.btn {
+  color: white;
+  background-color: #ffdb58;
+  padding: .75rem 1.5rem;
+  border-radius: .5rem;
+  text-decoration: bold;
+  font-size: .9rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color:#fae7b5 ;
+}
+
+.btn:focus {
+  background-color: Gold Fusion;
+}
+a.one:link, a.one:visited {
+  background-color: #ffcc00;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a.one:hover, a.one:active {
+  background-color: red;
+}
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+
+button {
+  position: relative;
+  margin: 4px auto 0;
+  background: #000;
+  font-size: 18px;
+  padding: 0;
+  font-family: gerogia, serif;
+  border: none;
+  padding: 10px 40px;
+  width: 100%
+  length: 20%;
+  background: #000;
+  color: #fff;
+  font-size: 16px;
+  max-width: 250px;
+  min-width: 100px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  transition: .2s;
+} button:hover {
+  letter-spacing: 3px;
+} button:active {
+  transform: scale(1.2);
+}
+
+button:before, button:after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px; 
+  background: linear-gradient(45deg, #000000, #191919, #323232, #666666, #cccccc, #ffffff, #ffff00, #e5e500, #cccc00, #999900, #666600, #4c4c00, #333300, #141400, #161600, #191900);
+  background-size: 400%;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  z-index: -1;
+  animation: linear-shadow 25s linear infinite;
+}
+
+button:before {
+  filter: blur(20px);
+}
+
+@keyframes linear-shadow {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
+.parallax {
+  /* The image used */
+  background-image: url('../images/whycameron.jpg');
+  opacity: .8;
+
+  /* Full height */
+  height: 100%; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  text-align: center;
+  vertical-align: center;
+color: yellow;
+  font-size: 200px;
+  font-weight: bold;
+  font-family: fantasy;
+}
+/* Style the list */
+ul.breadcrumb {
+  padding: 10px 16px;
+  list-style: none;
+  background-color: #eee;
+}
+
+/* Display list items side by side */
+ul.breadcrumb li {
+  display: inline;
+  font-size: 18px;
+}
+
+/* Add a slash symbol (/) before/behind each list item */
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
+}
+
+/* Add a color to all links inside the list */
+ul.breadcrumb li a {
+  color: #0275d8;
+  text-decoration: none;
+}
+
+/* Add a color on mouse-over */
+ul.breadcrumb li a:hover {
+  color: #01447e;
+  text-decoration: underline;
+}
